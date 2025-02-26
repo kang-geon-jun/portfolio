@@ -1,12 +1,18 @@
 import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./apps/Header";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
-      <h1 className="text-red-500 text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
+    <div>
+      <Header />
+      <Router>
+        <Routes>
+          <Route path="/portfolio" element={<Home />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
