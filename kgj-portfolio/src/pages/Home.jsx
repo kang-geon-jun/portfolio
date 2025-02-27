@@ -1,9 +1,9 @@
-import KaleidoscopeButton from "../components/KaleidoscopeButton";
+import CenterButton from "../components/CenterButton";
 
 const Home = () => {
   return (
     <div className="flex justify-center items-center h-screen">
-      <KaleidoscopeButton />
+      <CenterButton />
     </div>
   );
 };

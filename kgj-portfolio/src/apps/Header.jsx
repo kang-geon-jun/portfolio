@@ -13,19 +13,19 @@ const Header = () => {
             to="/portfolio/about"
             className="text-white text-lg hover:text-gray-200"
           >
-            About Me
+            여름
           </Link>
           <Link
             to="/portfolio/skills"
             className="text-white text-lg hover:text-gray-200"
           >
-            Skill
+            가을
           </Link>
           <Link
             to="/portfolio/projects"
             className="text-white text-lg hover:text-gray-200"
           >
-            Project
+            겨울
           </Link>
         </div>
       </div>
