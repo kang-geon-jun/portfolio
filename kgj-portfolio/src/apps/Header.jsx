@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <div className="fixed top-0 left-0 w-full bg-gradient-to-r from-indigo-200 to-pink-200 p-4 shadow-md z-10">
+    <div className="w-full bg-gradient-to-r from-indigo-200 to-pink-200 p-4 shadow-md z-10">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-        <h1 className="text-white text-2xl font-bold">건준's Portfolio</h1>
+        <Link to="/portfolio">
+          <h1 className="text-white text-2xl font-bold">건준`s Portfolio</h1>
+        </Link>
 
         <div className="space-x-4">
           <Link
