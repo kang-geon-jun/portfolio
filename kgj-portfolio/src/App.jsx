@@ -1,8 +1,13 @@
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { useRecoilValue } from "recoil";
+import { seasonState } from "./atoms/seasonAtom";
 
 import FallingCherryBlossom from "./components/designs/FallingCherryBlossom";
+import Raindrop from "./components/designs/Raindrop";
+import FallingLeaves from "./components/designs/FallingLeaf";
+import FallingSnow from "./components/designs/Snowflake";
 import Header from "./apps/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -17,11 +22,15 @@ const pageVariants = {
 
 function App() {
   const location = useLocation();
+  const season = useRecoilValue(seasonState);
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-purple-300 to-purple-100">
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <FallingCherryBlossom />
+        {season === "spring" && <FallingCherryBlossom />}
+        {season === "summer" && <Raindrop />}
+        {season === "autumn" && <FallingLeaves />}
+        {season === "winter" && <FallingSnow />}
       </div>
       <Header />
       <AnimatePresence mode="wait">
